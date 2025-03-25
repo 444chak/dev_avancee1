@@ -10,14 +10,14 @@ import jakarta.servlet.annotation.*;
 @WebServlet(name = "controllerServlet", urlPatterns = "*.do")
 public class ControllerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getServletPath();
+        String action = request.getServletPath().substring(1);
         HttpSession session = request.getSession();
 
         switch (action) {
-            case "/login.do":
+            case "login.do":
                 handleLogin(request, response, session);
                 break;
-            case "/updateAttributes.do":
+            case "updateAttributes.do":
                 handleUpdateAttributes(request, response, session);
                 break;
             default:
@@ -27,11 +27,14 @@ public class ControllerServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getServletPath();
+        String action = request.getServletPath().substring(1);
         HttpSession session = request.getSession();
 
         switch (action) {
-            case "/logout.do":
+            case "start.do":
+                handleStart(request, response, session);
+                break;
+            case "logout.do":
                 handleLogout(request, response, session);
                 break;
             default:
@@ -76,5 +79,9 @@ public class ControllerServlet extends HttpServlet {
     private void handleLogout(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException {
         session.invalidate();
         response.sendRedirect("goodbye.jsp");
+    }
+
+    private void handleStart(HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IOException {
+        response.sendRedirect("login.jsp");
     }
 }

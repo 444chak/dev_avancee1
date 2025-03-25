@@ -7,7 +7,7 @@
 <body>
 <h1>Hello World!</h1>
 <br/>
-<a href="login.jsp">Login</a>
+<a href="start.do">Login</a>
 <br/>
 </body>
 </html>
