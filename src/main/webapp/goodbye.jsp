@@ -8,5 +8,6 @@
 <body>
 <h1>Goodbye!</h1>
 <p>You will be redirected to the home page in 5 seconds.</p>
+<p>You can also click <a href="index.jsp">here</a> to return to the home page immediately.</p>
 </body>
 </html>

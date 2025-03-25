@@ -1,4 +1,4 @@
-package chkb.dev_avancee1;
+package chkb.dev_avancee1.model;
 
 import java.io.Serializable;
 

@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="chkb.dev_avancee1.UserBean" %>
+<%@ page import="chkb.dev_avancee1.model.UserBean" %>
 <%@ page import="jakarta.servlet.http.HttpSession" %>
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,7 @@
     }
 %>
 <h1>Login</h1>
-<form action="loginServlet" method="post">
+<form action="login.do" method="post">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
     <br/>

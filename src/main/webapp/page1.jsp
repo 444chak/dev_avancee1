@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="chkb.dev_avancee1.UserBean" %>
+<%@ page import="chkb.dev_avancee1.model.UserBean" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +14,7 @@
     }
 %>
 <h1>Welcome, <%= user.getNom() %>!</h1>
-<form action="updateAttributesServlet" method="post">
+<form action="updateAttributes.do" method="post">
     <label for="attribut1">Attribut 1:</label>
     <input type="text" id="attribut1" name="attribut1" value="<%= user.getAttribut1() %>" required>
     <br/>
@@ -24,7 +24,7 @@
     <input type="submit" value="Update">
 </form>
 <br/>
-<form action="logoutServlet" method="get">
+<form action="logout.do" method="get">
     <input type="submit" value="Logout">
 </form>
 </body>

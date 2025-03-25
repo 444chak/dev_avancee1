@@ -7,7 +7,7 @@
 <body>
 <h1>Hello World!</h1>
 <br/>
-<a href="startServlet">Login</a>
+<a href="login.jsp">Login</a>
 <br/>
 </body>
 </html>
