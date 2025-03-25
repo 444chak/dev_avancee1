@@ -14,7 +14,7 @@ public class ControllerServlet extends HttpServlet {
     private Map<String, Action> actions = new HashMap<>();
 
     @Override
-    public void init() throws ServletException {
+    public void init() {
         actions.put("login.do", new LoginAction());
         actions.put("logout.do", new LogoutAction());
         actions.put("updateAttributes.do", new UpdateAttributesAction());

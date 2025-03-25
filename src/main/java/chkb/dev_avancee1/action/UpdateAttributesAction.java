@@ -4,12 +4,10 @@ import chkb.dev_avancee1.model.UserBean;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import jakarta.servlet.ServletException;
-import java.io.IOException;
 
 public class UpdateAttributesAction implements Action {
     @Override
-    public String perform(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String perform(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();
         UserBean user = (UserBean) session.getAttribute("user");
 
