@@ -4,11 +4,9 @@ import chkb.dev_avancee1.ActionFactory;
 import chkb.dev_avancee1.action.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "controllerServlet", urlPatterns = "*.do")
 public class ControllerServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
