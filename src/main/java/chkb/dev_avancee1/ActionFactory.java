@@ -8,6 +8,7 @@ public class ActionFactory {
     private static final Map<String, Class<? extends Action>> actions = new HashMap<>();
 
     static {
+        actions.put("index.htm", IndexAction.class);
         actions.put("login.do", LoginAction.class);
         actions.put("logout.do", LogoutAction.class);
         actions.put("updateAttributes.do", UpdateAttributesAction.class);
