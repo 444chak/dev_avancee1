@@ -1,0 +1,8 @@
+<actions>
+    <action name="index.htm" class="chkb.dev_avancee1.action.IndexAction"/>
+    <action name="login.do" class="chkb.dev_avancee1.action.LoginAction"/>
+    <action name="logout.do" class="chkb.dev_avancee1.action.LogoutAction"/>
+    <action name="updateAttributes.do" class="chkb.dev_avancee1.action.UpdateAttributesAction"/>
+    <action name="validateAttributes.do" class="chkb.dev_avancee1.action.ValidateAttributesAction"/>
+    <action name="start.do" class="chkb.dev_avancee1.action.StartAction"/>
+</actions>
