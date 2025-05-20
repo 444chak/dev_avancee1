@@ -14,14 +14,15 @@
     }
 %>
 <h1>Welcome, <%= user.getNom() %>!</h1>
-<form action="updateAttributes.do" method="post">
+<form  method="post">
     <label for="attribut1">Attribut 1:</label>
-    <input type="text" id="attribut1" name="attribut1" value="<%= user.getAttribut1() %>" required>
+    <input type="text" id="attribut1" name="attribut1" value="<%= user.getAttribut1() %>">
     <br/>
     <label for="attribut2">Attribut 2:</label>
-    <input type="text" id="attribut2" name="attribut2" value="<%= user.getAttribut2() %>" required>
+    <input type="text" id="attribut2" name="attribut2" value="<%= user.getAttribut2() %>">
     <br/>
-    <input type="submit" value="Update">
+    <input type="submit" value="Validate" formaction="validateAttributes.do">
+    <input type="submit" value="Update" formaction="updateAttributes.do">
 </form>
 <br/>
 <form action="logout.do" method="get">

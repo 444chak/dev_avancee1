@@ -5,9 +5,12 @@
     <title>Error Page</title>
 </head>
 <body>
-<h1>Login Error</h1>
-<p>Invalid username or password. Please try again.</p>
+<h1>Error</h1>
+<p>
+    <% String errorMessage = (String) session.getAttribute("errorMessage"); %>
+    <%= errorMessage != null ? errorMessage : "An unknown error occurred." %>
+</p>
 <br/>
-<a href="login.jsp">Return to Login</a>
+<a href="javascript:history.back()">Retour à la page précédente</a>
 </body>
 </html>

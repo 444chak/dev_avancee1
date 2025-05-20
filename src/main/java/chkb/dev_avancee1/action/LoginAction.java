@@ -21,6 +21,8 @@ public class LoginAction implements Action {
             session.setAttribute("user", user);
             return "page1.jsp";
         } else {
+            HttpSession session = request.getSession();
+            session.setAttribute("errorMessage", "Invalid username or password");
             return "error.jsp";
         }
     }

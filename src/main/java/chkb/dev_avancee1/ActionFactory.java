@@ -12,6 +12,7 @@ public class ActionFactory {
         actions.put("login.do", LoginAction.class);
         actions.put("logout.do", LogoutAction.class);
         actions.put("updateAttributes.do", UpdateAttributesAction.class);
+        actions.put("validateAttributes.do", ValidateAttributesAction.class);
         actions.put("start.do", StartAction.class);
     }
 
